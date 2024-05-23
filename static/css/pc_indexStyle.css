@@ -1,0 +1,134 @@
+body{
+    margin-left: 10%;
+    justify-content: center;
+    padding-top: 1%;
+    width: 80%;
+    display: flex;
+    background-color: #37375A;
+    color: #bdc3c7;
+    font-family: 'Maven Pro', sans-serif;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img{
+    border-radius: 14px;
+    margin: 19px;
+    height: 450px;
+    width: auto;
+}
+
+h1{
+    border-bottom: solid 1px #7035c4;
+    padding: 0.6em 0 0.6em 0;
+    font-size: 2.4em;
+}
+
+.which{
+    display: flex;
+}
+
+.button{
+    text-decoration: none;
+    background: transparent;
+    width: 50%;
+    border: solid 1px #7053c4;
+    padding: 1em 3em;
+    color: #bdc3c7;
+    transition: all 0.6s;
+    margin-left: 6px;
+    margin-right: 6px;
+    border-radius: 3px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.button:hover{
+    background: #7035c4;
+}
+
+
+.username-display {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: lightgrey;
+    font-size: 0.9em;
+}
+.progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 13px;
+    height: 20px;
+    margin: 30px 0 5px;
+    width: 100%;
+}
+.percentage-display {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.progress {
+    background-color: #7053c4;
+    border-radius: 13px;
+    height: 100%;
+    width: 0;  /* 初期の進捗は0%です */
+}
+.logout-btn {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+}
+
+.logout-btn a {
+    text-decoration: none;
+    color: lightgrey;
+    background-color: transparent;
+    padding: 5px 10px;
+    border: 1px solid #7053c4;
+    border-radius: 3px;
+    transition: all 0.3s;
+}
+
+.logout-btn a:hover {
+    background-color: #7053c4;
+    color: white;
+}
+
+.help-button {
+    position: fixed;
+    bottom: 40px;
+    right: 35px;
+    background-color: #7053c4;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.help-message {
+    position: fixed;
+    bottom: 64px;
+    right: 43px;
+    background-color: white;
+    width: 40%;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+.close-button {
+    position: absolute;
+    top: 9px;
+    right: 16px;
+    cursor: pointer;
+}
