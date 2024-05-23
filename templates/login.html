@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ログイン</title>
+    <!--<link rel="stylesheet" href="loginStyle.css" type="text/css">-->
+    <!--<link rel="stylesheet" href="{{ url_for('static', filename='css/loginStyle.css') }}" type="text/css">-->
+    <link rel="stylesheet" media="screen and (min-width:769px)"
+        href="{{ url_for('static', filename='css/pc_loginStyle.css') }}" type="text/css">
+    <link rel="stylesheet" media="screen and (max-width:768px)"
+        href="{{ url_for('static', filename='css/sp_loginStyle.css') }}" type="text/css">
+</head>
+
+<body>
+    <form action="/login" method="post">
+        <h1>ログイン</h1>
+        <input placeholder="ユーザー名" type="text" name="username">
+        <input placeholder="パスワード" type="password" name="password">
+        {% if error %}
+            <div style="color: red;">{{ error }}</div>
+        {% endif %}
+        <input type="submit" value="login" id="submit">
+    </form>
+    <div class="new">
+        <a href="{{ url_for('register') }}">新規登録はこちら</a>
+    </div>
+    <!-- ここがヘルプボタン -->
+    <div class="help-button" onclick="toggleHelp()">?</div>
+
+    <!-- ここがヘルプメッセージ -->
+    <div class="help-message">
+        本研究の目的は「機械学習を用いて、猫の顔つきから野良猫と飼い猫を分類することは可能であるかどうか」を研究することです。
+        このサイトのアンケートは、「野良猫」「飼い猫」の正解データを獲得するために実施するものです。<br>
+        調査データは厳重に保管され、統計的に処理されます。個人のプライバシーの保護については十分配慮し、あなたにご迷惑をおかけすることはありません。
+        ご協力いただきました調査データに基づき論文を作成し、情報処理学会ユビキタスコンピューティングシステム研究会に提出することを予定しております。
+        研究目的以外には使用いたしません。
+        上記の趣旨を理解いただき、ご回答ください。<br>不明な点がありましたら、下記にご連絡ください。<br><br>
+        <本研究の問い合わせ先> <br>
+            慶應義塾大学総合政策学部　本山理奈<br>
+            連絡先：080-4745-4109<br>
+            e-mail：rimot_151410@keio.jp
+            <div class="close-button" onclick="closeHelp()">×</div>
+    </div>
+    <script>
+        function toggleHelp() {
+            const helpMessage = document.querySelector('.help-message');
+            helpMessage.style.display = helpMessage.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function closeHelp() {
+            document.querySelector('.help-message').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
