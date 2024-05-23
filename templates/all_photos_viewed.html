@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>写真表示完了</title>
+    <!--<link rel="stylesheet" href="lastStyle.css" type="text/css">-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/lastStyle.css') }}" type="text/css">
+</head>
+<body>
+    <section>
+        <h1>全ての写真を分類し終わりました！</h1>
+        <h2>ご協力ありがとうございました！</h2>
+        <a href="{{ url_for('login') }}">ログイン画面に戻る</a>
+    </section>
+</body>
+</html>
